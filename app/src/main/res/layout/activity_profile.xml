@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/button_gradient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/circleImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+
+                android:background="@drawable/circle_border"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/CircleImageView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginBottom="9dp"
+                    android:background="@drawable/circle"
+                    android:padding="3dp"
+
+                    android:src="@drawable/ic_baseline_add_a_photo_24" />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/circleImageView"
+                >
+
+                <EditText
+                    android:id="@+id/inputUsername"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/input"
+                    android:hint="Nickname"
+                    android:padding="5dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/inputAge"
+                    android:layout_width="180dp"
+                    android:hint="Age"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:background="@drawable/input"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll2"
+
+                app:layout_constraintEnd_toEndOf="@+id/ll"
+                app:layout_constraintStart_toStartOf="@+id/ll"
+                app:layout_constraintTop_toBottomOf="@+id/ll"
+                >
+                <EditText
+                    android:id="@+id/inputCity"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:ems="10"
+                    android:layout_marginStart="10dp"
+                    android:inputType="textPersonName"
+                    android:hint="City"
+                    android:padding="5dp"
+                    android:background="@drawable/input"
+                     />
+
+                <EditText
+                    android:id="@+id/inputCountry"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+
+                    android:ems="10"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:inputType="textPersonName"
+                    android:hint="Country"
+                    android:padding="5dp"
+                    android:background="@drawable/input"
+                    />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/inputProfession"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:background="@drawable/input"
+                android:inputType="textPersonName"
+                android:hint="Profession"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/ll2"
+                app:layout_constraintStart_toStartOf="@+id/ll2"
+                app:layout_constraintTop_toBottomOf="@+id/ll2" />
+            <EditText
+                android:id="@+id/inputAbout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:lines="5"
+                android:background="@drawable/input"
+                android:inputType="textPersonName"
+                android:hint="Say something about yourself..."
+                android:textAlignment="viewStart"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/inputProfession"
+                app:layout_constraintStart_toStartOf="@+id/inputProfession"
+                app:layout_constraintTop_toBottomOf="@+id/inputProfession" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_gradient"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/inputAbout"
+                app:layout_constraintStart_toStartOf="@+id/inputAbout"
+                app:layout_constraintTop_toBottomOf="@+id/inputAbout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

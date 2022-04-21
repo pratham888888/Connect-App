@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_yellow">#FBFAF0</color>
+    <color name="red">#FE5F55</color>
+    <color name="dark_green">#4F6367</color>
+    <color name="dark_gray">#FF37474F</color>
+    <color name="background">#F0F4F3</color>
+    <color name="palette1a">#FFE6E6</color>
+    <color name="palette1b">#FFABE1</color>
+    <color name="palette1c">#A685E2</color>
+    <color name="palette1d">#6155A6</color>
+    <color name="palette2a">#ff69b4</color>
+    <color name="palette2b">#ffddf4</color>
+    <color name="palette2c">#FFE6E6</color>
+    <color name="palette2d">#FFE6E6</color>
+    <color name="address">#2F7092</color>
+    <color name="followers">#0D5D98</color>
+    <color name="headings">#3797CF</color>
+    <color name="solidCircle">#AAFFFFFF</color>
+    <color name="circleBorder">#50FFFFFF</color>
+    <color name="gradEnd">#67EFC8</color>
+    <color name="gradStart">#63C9FF</color>
+    <color name="followersBg">#65DCE5</color>
+    <color name="followingBg">#49BEFF</color>
+    <color name="grey">#E5E5E5</color>
+</resources>

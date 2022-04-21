@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="16dp"
+    app:cardCornerRadius="20dp"
+    app:strokeColor="@color/black"
+    app:strokeWidth="1dp"
+    android:outlineAmbientShadowColor="@color/dark_gray"
+    app:cardBackgroundColor="#FFFFFF"
+    android:layout_marginHorizontal="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:id="@+id/userImage"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="0dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/userImage"
+            app:layout_constraintRight_toLeftOf="@id/settings"
+            app:layout_constraintTop_toTopOf="@id/userImage"
+            android:layout_marginLeft="12dp"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/createdAt"
+            android:layout_width="0dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/userImage"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userName"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="12dp" />
+        <ImageButton
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_delete_outline_24"
+            android:background="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/userName"
+            app:layout_constraintTop_toTopOf="@id/userImage"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photo"
+            android:id="@+id/postTitle"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_marginTop="12dp"
+            android:textColor="#212121" />
+
+        <com.jsibbold.zoomage.ZoomageView
+            android:id="@+id/photo"
+            android:layout_width="375dp"
+            android:layout_height="375dp"
+            android:background="@drawable/edittext_round_shape"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/postTitle"
+            app:layout_constraintTop_toBottomOf="@id/createdAt"
+            android:layout_marginTop="10dp"
+            app:zoomage_restrictBounds="false"
+            app:zoomage_animateOnReset="true"
+            app:zoomage_autoResetMode="ALWAYS"
+            app:zoomage_autoCenter="true"
+            app:zoomage_zoomable="true"
+            app:zoomage_translatable="false"
+            app:zoomage_minScale="0.6"
+            app:zoomage_maxScale="8"
+             />
+
+
+        <ImageView
+            android:id="@+id/likeButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintLeft_toLeftOf="@id/postTitle"
+            app:layout_constraintTop_toBottomOf="@id/postTitle"
+            android:layout_marginTop="16dp" />
+
+        <ImageView
+            android:id="@+id/commentButton"
+            android:layout_width="21dp"
+            android:layout_height="24dp"
+            android:onClick="CommentActivityIntent"
+            android:layout_marginLeft="6dp"
+
+            android:layout_marginTop="16dp"
+            android:src="@drawable/final_comment"
+            app:layout_constraintLeft_toRightOf="@id/likeCount"
+            app:layout_constraintTop_toBottomOf="@id/postTitle" />
+
+        <TextView
+            android:id="@+id/likeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/likeButton"
+            app:layout_constraintTop_toTopOf="@id/likeButton"
+            android:layout_marginLeft="6dp"
+            app:layout_constraintBottom_toBottomOf="@id/likeButton" />
+
+        <EditText
+            android:id="@+id/CommentInputs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/inputcomment"
+            android:hint="  Add comment..."
+            android:textColorHint="@color/dark_gray"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingStart="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/likeCount" />
+
+        <ImageView
+            android:id="@+id/sendComments"
+            android:layout_width="34dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_outline_send_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/CommentInputs" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
